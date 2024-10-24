@@ -1,0 +1,77 @@
+body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+    background-image: url("pexels-ppppr-12997438.jpg");
+}
+h1{
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-size: 14vw;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52; 
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: rgb(17, 240, 17);
+    -webkit-text-stroke: 0vw  #383d52;
+    border-right: 2px solid rgb(17, 240, 17);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+h5{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 5%;
+}
+
+
+.stopwatch {
+    background: transparent;
+    color: whitesmoke;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 15px rgba(236, 4, 4, 0.2); */
+    padding: 30px;
+    text-align: center;
+}
+
+.time {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
